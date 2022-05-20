@@ -1,0 +1,13 @@
+{% title block %}<title>River Expeditions</title>{% endblock %}
+
+{% extends '../home/templates/base.html' %}
+	<h1>River Expeditions</h1>
+	{% if river_list %}
+	<ul>
+		{% for river in river_list %}
+		<li>
+			<a href="{{ river.get_absolute_url }}">{{ river.name }}</a>
+		</li>
+		{% endfor %}
+	</ul>
+	
