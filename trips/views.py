@@ -18,3 +18,8 @@ def index(request):
 
 def displayRivers(request):
 	rivers = River.objects.all()
+	context  = {
+		'rivers': rivers,
+	}
+
+	return render(request, 'trips/river_details.html', context=context)
