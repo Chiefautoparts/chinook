@@ -21,9 +21,9 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', include('home.urls')),
-    path('trips/', include('trips.urls')),
-    path('riverSchool/', include('riverSchool.urls')),
+    path('', include('home.urls', namespace='home')),
+    path('trips/', include('trips.urls', namespace='trips')),
+    path('riverSchool/', include('riverSchool.urls', namespace='riverSchool')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 """

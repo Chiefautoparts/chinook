@@ -6,22 +6,22 @@
 	{% block title %}<title>Chinook Expeditions</title>{% endblock %}
 	{% load static %}
 	<link rel="stylesheet" href="{% static 'style.css' %}">
-	<script type="text/javascript" href="{% static 'sapp.js' %}"></script>
+	<script type="text/javascript" href="{% static 'app.js' %}"></script>
 </head>
 <body>
 	<ul id="nav">
 		<li><a href="#">Home</a></li>
 		<li><a href="#">Why Us</a></li>
-		<li><a href="#">Trips</a></li>
+		<li><a href="{% url 'trips:rivers' %}">Trips</a></li>
 		<li><a href="#">Photo Gallery</a></li>
 		<li><a href="#">River School</a></li>
 		<li><a href="#">Shop</a></li>
 	</ul>
-
+	<div id="content">
 	{% block content %}
 		<!-- webpage context -->
 	{% endblock %}
-
+	</div>
 	<div class="footer-menu">
 		<div id="canoe">
 			<h4>Canoe Trips</h5>

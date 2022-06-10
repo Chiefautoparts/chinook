@@ -1,3 +1,9 @@
+/* Home page */
+#content{
+	margin-left: 100px;
+}
+
+/* Nav menu style */
 ul#nav {
 	position: fixed;
 	margin: 0px;
