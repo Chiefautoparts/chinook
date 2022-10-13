@@ -14,7 +14,7 @@ class RiverListView(generic.DetailView):
 		return render(request, 'river/river_detail.html', context={'river': river})
 
 def index(request):
-	return render(request, 'rivers.html')
+	return render(request, 'trips/rivers.html')
 
 def displayRivers(request):
 	rivers = River.objects.all()
@@ -22,4 +22,4 @@ def displayRivers(request):
 		'rivers': rivers,
 	}
 
-	return render(request, 'trips/river_details.html', context=context)
+	return render(request, 'trips/river.html', context=context)

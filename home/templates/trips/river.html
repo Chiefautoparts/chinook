@@ -1,6 +1,9 @@
-{% title block %}<title>River Expeditions</title>{% endblock %}
-
 {% extends 'base.html' %}
+
+{% block title %}<title>River Expeditions</title>{% endblock %}
+
+
+{% block content %}
 	<h1>River Expeditions</h1>
 	{% if river_list %}
 	<ul>
@@ -10,4 +13,5 @@
 		</li>
 		{% endfor %}
 	</ul>
+    {% endif %}
 {% endblock %}
